@@ -39,6 +39,6 @@ Modificaciones Por separado:
             </div>
         </div>
         <div class="container copyright">
-            <p>&copy; 2025 Nombre de la Institución. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Instituto Superior de Formacion Tecnica N°191. Todos los derechos reservados.</p>
         </div>
     </footer>
