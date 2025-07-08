@@ -97,7 +97,7 @@ nav ul li a:hover::after {
 
 /* Hero Section (Home - Solo en index.html) */
 .hero-section {
-    background: url('img/hero-bg-formal1.png') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
+    background: url('img/Fondo2.png') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
     color: var(--white);
     text-align: center;
     padding: 120px 20px;
@@ -241,26 +241,192 @@ h2::after {
 
 /* CAI - Grid de Información */
 
-.Cai-intro {
-
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 40px;
-    background-color: var(--neutral-aqua-pale);
+/* Sección Consejo Académico Institucional (CAI) */
+.cai-info-section {
+    background-color: var(--white);
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    color: var(--primary-blue-dark); /* Texto en azul oscuro */
-    font-family: var(--font-heading);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
-.Cai-intro a {
-    color: var(--primary-blue-dark); /* Enlaces en azul oscuro */
+.cai-info-section h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue-dark);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--tertiary-sky-light);
+    padding-bottom: 10px;
+}
+
+.cai-info-section p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: var(--text-dark-gray);
+    margin-bottom: 15px;
+}
+
+.cai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cai-feature-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--secondary-teal-medium); /* Borde superior distintivo */
+    text-align: center; /* Centrar el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cai-feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.cai-feature-item i {
+    font-size: 3.5em; /* Tamaño grande para los iconos */
+    color: var(--secondary-teal-medium);
+    margin-bottom: 20px;
+}
+
+.cai-feature-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6em;
+    color: var(--primary-blue-dark);
+    margin-bottom: 15px;
+}
+
+.cai-feature-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-dark-gray);
+    margin-bottom: 15px;
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio disponible */
+}
+
+.cai-feature-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Alinea las listas a la izquierda */
+    margin-bottom: 15px;
+}
+
+.cai-feature-item ul li {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: var(--text-dark-gray);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cai-feature-item ul li::before {
+    content: '\2713'; /* Checkmark Unicode */
+    color: var(--secondary-teal-medium);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cai-feature-item .btn-primary-small {
+    background-color: var(--primary-blue-medium); /* Botón azul */
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cai-feature-item .btn-primary-small:hover {
+    background-color: var(--primary-blue-dark);
+}
+
+.cai-contact-info {
+    max-width: 800px;
+    margin: 60px auto 0;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.cai-contact-info h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue-dark);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cai-contact-info p {
+    font-size: 1.1em;
+    color: var(--text-dark-gray);
+    margin-bottom: 15px;
+}
+
+.cai-contact-info p a {
+    color: var(--secondary-teal-medium);
     text-decoration: none;
     font-weight: 600;
+}
+
+.cai-contact-info p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Queries para la Sección CAI */
+@media (max-width: 768px) {
+    .cai-info-section,
+    .cai-contact-info {
+        padding: 25px;
+    }
+
+    .cai-info-section h3,
+    .cai-contact-info h3 {
+        font-size: 1.6em;
+    }
+
+    .cai-info-section p,
+    .cai-feature-item p,
+    .cai-contact-info p {
+        font-size: 1em;
+    }
+
+    .cai-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 25px;
+    }
+
+    .cai-feature-item {
+        padding: 25px;
+    }
+
+    .cai-feature-item i {
+        font-size: 3em;
+    }
+
+    .cai-feature-item h3 {
+        font-size: 1.4em;
+    }
+
+    .cai-feature-item ul {
+        text-align: left; /* Asegurarse que la lista se vea bien */
+    }
 }
 
 .info-grid {
@@ -373,122 +539,404 @@ h2::after {
     width: 100%;
 }
 
-/* Secretaría */
-
-.section-description a {
-    color: var(--primary-blue-dark); /* Enlaces en azul oscuro */
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.contact-info {
-    max-width: 700px;
-    margin: 0 auto;
+/* Sección Secretaría Académica */
+.secretaria-intro {
     background-color: var(--white);
-    padding: 40px;
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
-.contact-info p, .contact-info ul {
-    font-size: 1.1em;
-    margin-bottom: 15px;
+.secretaria-intro p {
+    font-size: 1.05em;
+    line-height: 1.7;
     color: var(--text-dark-gray);
+    margin-bottom: 15px;
 }
 
-.contact-info ul {
-    list-style: disc;
-    margin-left: 25px;
-    padding: 0;
-}
-
-.contact-info ul li {
-    margin-bottom: 8px;
-}
-
-.contact-info a {
-    color: var(--primary-blue-dark); /* Enlaces en azul oscuro */
+.secretaria-intro a {
+    color: var(--secondary-teal-medium);
     text-decoration: none;
     font-weight: 600;
 }
 
-.contact-info a:hover {
+.secretaria-intro a:hover {
     text-decoration: underline;
 }
 
-/* Profesores Grid */
-
-.profesores-base {
-    
+.secretaria-contact {
     background-color: var(--white);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: var(--white); /* Fondo aguamarina pálido */
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    text-align:left;
-    color: var(--primary-blue-dark); /* Texto en azul oscuro */
-    font-family: var(--font-heading);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 40px;   
+    margin-bottom: 60px;
 }
 
-.profesores-base a {
-        color: var(--primary-blue-dark); /* Enlaces en azul oscuro */
-        text-decoration: none;
-        font-weight: 600;
-    }
+.secretaria-contact h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--primary-blue-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--tertiary-sky-light);
+    padding-bottom: 10px;
+}
 
-.profesor-grid {
+.secretaria-contact h3 i {
+    font-size: 1.2em;
+    color: var(--secondary-teal-medium);
+}
+
+.secretaria-contact p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-dark-gray);
+    margin-bottom: 15px;
+}
+
+.secretaria-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.secretaria-contact ul li {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: var(--text-dark-gray);
+    margin-bottom: 8px;
+}
+
+.secretaria-contact ul li strong {
+    color: var(--primary-blue-dark);
+}
+
+.secretaria-contact ul li a {
+    color: var(--secondary-teal-medium);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secretaria-contact ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.secretaria-services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 40px;
 }
 
-.profesor-item {
+.service-block {
     background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     padding: 30px;
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary-blue-medium); /* Borde superior con azul medio */
+    display: flex;
+    flex-direction: column;
 }
 
-.profesor-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+.service-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.profesor-item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 4px solid var(--secondary-teal-medium); /* Borde de foto en verde mar */
-}
-
-.profesor-item h3 {
+.service-block h3 {
     font-family: var(--font-heading);
-    color: var(--primary-blue-dark); /* Nombres de profesor en azul oscuro */
     font-size: 1.6em;
-    margin-bottom: 5px;
+    color: var(--primary-blue-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--tertiary-sky-light);
+    padding-bottom: 10px;
 }
 
-.profesor-item p {
-    font-size: 1.0em;
-    color: var(--text-medium-gray);
+.service-block h3 i {
+    font-size: 1.2em;
+    color: var(--secondary-teal-medium); /* Iconos del color secundario */
+}
+
+.service-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Para que la lista ocupe el espacio y los enlaces queden abajo */
+}
+
+.service-block ul li {
+    font-size: 1em;
+    line-height: 1.7;
+    color: var(--text-dark-gray);
     margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
 }
 
-.profesor-item .specialty {
-    font-size: 0.9em;
+.service-block ul li::before {
+    content: '\2022'; /* Círculo */
+    color: var(--secondary-teal-medium);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.service-block a {
+    color: var(--primary-blue-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.service-block a:hover {
+    color: var(--secondary-teal-medium);
+    text-decoration: underline;
+}
+
+.service-block .file-format {
+    font-size: 0.85em;
     color: var(--text-medium-gray);
+    margin-left: 5px;
     font-style: italic;
+}
+
+
+/* Media Queries para la Sección Secretaría */
+@media (max-width: 768px) {
+    .secretaria-intro,
+    .secretaria-contact,
+    .service-block {
+        padding: 25px;
+    }
+
+    .secretaria-contact h3,
+    .service-block h3 {
+        font-size: 1.4em;
+    }
+
+    .secretaria-intro p,
+    .secretaria-contact p,
+    .secretaria-contact ul li,
+    .service-block ul li {
+        font-size: 0.95em;
+    }
+
+    .secretaria-services-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 25px;
+    }
+}
+
+/* Sección de Recursos para Profesores */
+.profesor-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.resource-block {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--secondary-teal-medium); /* Borde superior distintivo */
+    display: flex; /* Para controlar la alineación del contenido */
+    flex-direction: column;
+}
+
+.resource-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.resource-block.full-width { /* Para el bloque de concursos */
+    grid-column: 1 / -1; /* Ocupa todas las columnas disponibles */
+}
+
+.resource-block h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6em;
+    color: var(--primary-blue-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--tertiary-sky-light);
+    padding-bottom: 10px;
+}
+
+.resource-block h3 i {
+    font-size: 1.2em;
+    color: var(--secondary-teal-medium);
+}
+
+.resource-block ul,
+.resource-block ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.resource-block ul li,
+.resource-block ol li {
+    font-size: 1em;
+    line-height: 1.7;
+    color: var(--text-dark-gray);
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Viñetas personalizadas para listas (ul) */
+.resource-block ul li::before {
+    content: '\2022'; /* Círculo */
+    color: var(--secondary-teal-medium);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Números personalizados para listas ordenadas (ol) */
+.resource-block ol {
+    counter-reset: resource-item; /* Inicia el contador */
+}
+
+.resource-block ol li::before {
+    counter-increment: resource-item; /* Incrementa el contador */
+    content: counter(resource-item) "."; /* Muestra el número */
+    color: var(--secondary-teal-medium);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em; /* Ajusta el ancho para el número */
+    margin-left: -1.5em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: right;
+}
+
+.resource-block a {
+    color: var(--primary-blue-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resource-block a:hover {
+    color: var(--secondary-teal-medium);
+    text-decoration: underline;
+}
+
+.resource-block .file-format {
+    font-size: 0.85em;
+    color: var(--text-medium-gray);
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.attention-text {
+    color: var(--primary-blue-dark);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.important-notice {
+    background-color: #fffde7; /* Un amarillo muy suave */
+    border-left: 5px solid #ffeb3b; /* Borde amarillo más fuerte */
+    padding: 15px 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    color: var(--text-dark-gray);
+}
+
+.important-notice a {
+    font-weight: bold;
+    color: var(--secondary-teal-dark);
+}
+
+
+/* Contacto general al final de la página */
+.general-contact-info {
+    max-width: 800px;
+    margin: 60px auto 0;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.general-contact-info h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue-dark);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.general-contact-info p {
+    font-size: 1.1em;
+    color: var(--text-dark-gray);
+    margin-bottom: 15px;
+}
+
+.general-contact-info p a {
+    color: var(--secondary-teal-medium);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.general-contact-info p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Queries para la Sección de Recursos de Profesores */
+@media (max-width: 768px) {
+    .profesor-resources-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 25px;
+    }
+
+    .resource-block,
+    .general-contact-info {
+        padding: 25px;
+    }
+
+    .resource-block h3 {
+        font-size: 1.4em;
+    }
+
+    .resource-block ul li,
+    .resource-block ol li,
+    .attention-text,
+    .important-notice {
+        font-size: 0.9em;
+    }
+
+    .resource-block.full-width {
+        padding: 25px; /* Asegurar padding en móviles */
+    }
 }
 
 /* Ingresantes */
@@ -1182,3 +1630,114 @@ footer {
         font-size: 0.95em;
     }
 }
+
+
+
+/* Estilos para los iconos de redes sociales en el header */
+.header-social {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    display: flex;
+    gap: 15px; /* Espacio entre los iconos */
+    z-index: 100; /* Asegura que estén por encima de otros elementos */
+}
+
+.header-social a {
+    color: var(--primary-blue-dark); /* Color de los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.header-social a:hover {
+    color: var(--secondary-teal-medium); /* Color al pasar el mouse */
+    transform: scale(1.1);
+}
+
+/* Ajustes para el header en general para dar espacio a los iconos */
+header {
+    padding-top: 60px; /* Aumenta el padding superior para que no se superpongan */
+    /* Mantén otros estilos del header */
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    .header-social {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+
+    .header-social a {
+        font-size: 20px;
+    }
+
+    header {
+        padding-top: 45px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-social {
+        top: 5px;
+        right: 5px;
+        gap: 5px;
+    }
+
+    .header-social a {
+        font-size: 16px;
+    }
+
+    header {
+        padding-top: 40px;
+    }
+}
+
+/* style.css */
+
+/* ... (mantén tus estilos existentes para .modal, .modal-content, .close-button) ... */
+
+/* Estilos para el contenido del modal de requisitos (ejemplo) */
+.modal-body-content {
+    padding: 20px 0; /* Ajusta el padding según necesites */
+    color: var(--text-dark-gray);
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+.modal-body-content h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue-dark);
+    font-size: 1.6em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--tertiary-sky-light);
+    padding-bottom: 5px;
+}
+
+.modal-body-content ul {
+    list-style: disc; /* Viñetas por defecto */
+    margin-left: 25px; /* Indentación para las viñetas */
+    margin-bottom: 20px;
+}
+
+.modal-body-content ul li {
+    margin-bottom: 10px;
+}
+
+.modal-body-content ul li strong {
+    color: var(--primary-blue-dark);
+}
+
+.modal-body-content a {
+    color: var(--secondary-teal-medium);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-body-content a:hover {
+    text-decoration: underline;
+}
+
+/* Puedes reutilizar .btn-secondary para el botón de contactar Secretaría */
