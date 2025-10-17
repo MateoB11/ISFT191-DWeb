@@ -94,6 +94,22 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Estilo para el enlace activo en la navegación */
+nav ul li a.active {
+    background-color: transparent; /* SIN fondo */
+    color: var(--secondary-teal-medium); /* Color ÚNICO destacado para el texto */
+    font-weight: 700; /* Negrita (Bold) para resaltado */
+    border-bottom: none; /* SIN borde */
+    border-radius: 0; /* SIN bordes redondeados */
+}
+
+/* El hover sobre el activo no debe cambiar nada */
+nav ul li a.active:hover {
+    color: var(--secondary-teal-medium); /* Mantiene el color activo */
+    font-weight: 700;
+    border-bottom: none;
+}
+
 
 /* Hero Section (Home - Solo en index.html) */
 .hero-section {
@@ -737,6 +753,32 @@ h2::after {
     .secretaria-services-grid {
         grid-template-columns: 1fr; /* Una columna en móviles */
         gap: 25px;
+    }
+}
+
+/* Estilos para formularios dentro de modales en la seccion Secretaria (y formularios generales) */
+.simple-form-layout {
+    /* ... (mantén los estilos de .simple-form-layout) ... */
+}
+
+/* Nuevo estilo para organizar campos en dos columnas */
+.form-row-2-cols {
+    display: flex;
+    gap: 20px; /* Espacio entre las columnas */
+    width: 100%;
+}
+
+.form-row-2-cols .form-group {
+    flex: 1; /* Distribuye el espacio equitativamente entre las columnas */
+}
+
+/* Media Query para asegurar que las columnas se apilen en móviles */
+@media (max-width: 600px) {
+    /* ... (mantén los estilos existentes para .simple-form-layout y .form-group en móviles) ... */
+    
+    .form-row-2-cols {
+        flex-direction: column; /* Apila las columnas verticalmente en pantallas pequeñas */
+        gap: 0;
     }
 }
 
@@ -1694,9 +1736,6 @@ header {
     }
 }
 
-/* style.css */
-
-/* ... (mantén tus estilos existentes para .modal, .modal-content, .close-button) ... */
 
 /* Estilos para el contenido del modal de requisitos (ejemplo) */
 .modal-body-content {
