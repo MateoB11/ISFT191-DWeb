@@ -113,7 +113,7 @@ nav ul li a.active:hover {
 
 /* Hero Section (Home - Solo en index.html) */
 .hero-section {
-    background: url('img/Fondo2.png') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
+    background: url('Img/Fondo2.png') no-repeat center center/cover; /* Asegúrate de tener esta imagen */
     color: var(--white);
     text-align: center;
     padding: 120px 20px;
@@ -1778,5 +1778,6 @@ header {
 .modal-body-content a:hover {
     text-decoration: underline;
 }
+
 
 /* Puedes reutilizar .btn-secondary para el botón de contactar Secretaría */
